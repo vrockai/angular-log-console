@@ -1,18 +1,19 @@
 #angular-log-table
-Add the ability to use $log.table to display object arrays in the Chrome developer tools console
+Extend the $log service with the methods from the browser debugging console object. The project is based on the
+[angular-log-table](https://github.com/codevinsky/angular-log-table) plugin by [Jeremy Dowell](https://github.com/codevinsky).
 
 ### Install
-Either copy ngLogTable.js to your project, or if you're doing front-end right, use bower:
+Either copy angular-log-console.js to your project, or if you're doing front-end right, use bower:
     
-    $ bower install --save angular-log-table
+    $ bower install --save angular-log-console
 
 ###Usage
 
-First, add *angular-log-table* to your module's dependencies
+First, add *angular-log-console* to your module's dependencies
 
-    angular.module('myApp', ['angular-log-table'])
+    angular.module('myApp', ['angular-log-console'])
 
-Next, call $log.table from your controller with an array of objects:
+Next, call $log.* methods from your controller with an array of objects, i.e.:
 
     angular.module('myApp')
     .controller('MyCtrl', function($scope, $log) {
@@ -28,12 +29,13 @@ Next, call $log.table from your controller with an array of objects:
 This will produce the following in the chrome developer console
 ![demo image 1](http://i.imgur.com/UDl3twL.png)
 
-#### Plucking fields
+To learn more about ethods available on the console object, visit [Console Web API Interfaces page](https://developer.mozilla.org/en/docs/Web/API/console).
+
+#### Plucking fields in $log.table
 If you'd don't want all of the fields displayed, you can pluck the required fields by passing in an array of field names as the second argument:
 
     $log.table($scope.statistics, ['firstName', 'lastName']);
 
 ### Update notes:
-- **0.0.2**
-    -  renamed module to angular-log-table to adhere to AngularJS best practices.
-        - **NB:** after updating to 0.0.2 please modify your app's dependency definition to `angular-log-table`, and make sure that `angular-log-table.js` is included in your app.
+- **0.0.1**
+    -  First release

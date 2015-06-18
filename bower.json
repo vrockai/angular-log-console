@@ -1,19 +1,18 @@
 {
-  "name": "angular-log-table",
-  "version": "0.0.2",
+  "name": "angular-log-console",
+  "version": "0.0.1",
   "authors": [
-    "jdowell <jeremy@codevinsky.com>"
+    "jdowell <jeremy@codevinsky.com>", "raibutera", "vrockai"
   ],
-  "description": "Add a $log.table method to $logProvider",
-  "main": "angular-log-table.js",
+  "description": "Extend the $log service with the methods from the browser debugging console object.",
+  "main": "angular-log-console.js",
   "keywords": [
     "angular",
     "log",
-    "table",
     "console"
   ],
   "license": "WTFPL",
-  "homepage": "http://github.com/codevinsky",
+  "homepage": "http://github.com/vrockai/angular-log-console",
   "ignore": [
     "**/.*",
     "node_modules",
